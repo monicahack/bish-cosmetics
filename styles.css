@@ -6,15 +6,6 @@ body{
     margin: 0;
 }
 
-nav{
-    margin-right: 25px;
-}
-
-nav li{
-    display: inline;
-    margin: 5px;
-}
-
 header{
     display: flex;
     justify-content: space-between;
@@ -25,9 +16,22 @@ header{
     padding: 10px 0;
 }
 
+h2.logo {
+    margin-left: 100px;
+}
+
 .lips {
     height: 8%;
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+nav{
+    margin-right: 25px;
+}
+
+nav li{
+    display: inline;
+    margin: 5px;
 }
