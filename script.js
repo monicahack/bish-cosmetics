@@ -41,7 +41,7 @@ const products = [
     {
     name: "Ratchet Bish",
     category: "Concealer",
-    description: "Creamy coverage for all imperfections",
+    description: "Creamy coverage for All Imperfections",
     price: 24.99,
     }, 
     {
@@ -65,7 +65,7 @@ const products = [
     {
     name: "Clean Bish",
     category: "Makeup Remover",
-    description: "Reusable and Washable Makeup Remover Cloth With Trial Size Spritzer",
+    description: "Reusable and Washable Makeup Remover Cloth With Trial-Size Spritzer",
     price: 39.99
     }              
 ]
