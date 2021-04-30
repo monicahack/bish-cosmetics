@@ -36,23 +36,30 @@ nav li{
     margin: 5px;
 }
 
-
+.productArray{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
 .productArray li{
     list-style-type: none;
     font-size: 12px;
+    width: 250px;
 }
 
-li:first-of-type {
+.productArray li:first-of-type {
     font-size: 16px;
     text-shadow: 2px;
 }
 
-li:nth-child(3){
+.productArray li:nth-child(3){
     font-style: italic;
 }
 
 
-//add styling for screens 768px and above below
+/* add styling for screens 768px and above below */
 @media screen and (min-width: 768px) {
             
 

@@ -5,7 +5,7 @@ const products = [
     {
     name: "Bish Slap",
     category: "Nail Polish",
-    description: "Shellac with a smack",
+    description: "Shellac with a Smack",
     price: 14.99,
     },
     {
@@ -23,7 +23,7 @@ const products = [
     {
     name: "Bad Bish",
     category: "Eye Liner",
-    description: "Dramatic liquid eye liner pencil",
+    description: "Dramatic Liquid Eyeliner Pencil",
     price: 14.99,
     },   
     {
@@ -41,13 +41,13 @@ const products = [
     {
     name: "Ratchet Bish",
     category: "Concealer",
-    description: "Creamy coverage for All Imperfections",
+    description: "Creamy Coverage for All Imperfections",
     price: 24.99,
     }, 
     {
     name: "Big Bish",
     category: "Mascara",
-    description: "Amplifying Liquid Mascara With Patented Wand to Separate Lashes",
+    description: "Amplifying Liquid Mascara with Patented Wand to Separate Lashes",
     price: 19.99,
     }, 
     {
@@ -59,13 +59,13 @@ const products = [
     {
     name: "One Bish, Two Bish",
     category: "Faux Eyelashes",
-    description: "Long and Full Faux Eyelash Kit With Magnetic Eyeliner",
+    description: "Long and Full Faux Eyelash Kit with Magnetic Eyeliner",
     price: 39.99,
     },
     {
     name: "Clean Bish",
     category: "Makeup Remover",
-    description: "Reusable and Washable Makeup Remover Cloth With Trial-Size Spritzer",
+    description: "Reusable and Washable Makeup Remover Cloth with Trial-Size Spritzer",
     price: 39.99
     }              
 ]
