@@ -1,3 +1,6 @@
+(function() {
+let productList = document.querySelector(".productArray");
+
 const products = [
     {
     name: "Bish Slap",
@@ -66,3 +69,21 @@ const products = [
     price: 39.99
     }              
 ]
+//leaving products in order above, and will change order physically in array if we want them to show differently on page
+//for of loop
+
+
+ for (const indivProduct of products) {
+    let productItems = "<ul>";
+    console.log(indivProduct);
+    productItems += "<li>" + indivProduct.name + "</li>";
+    productItems += "<li>" + indivProduct.category + "</li>";
+    productItems += "<li>" + indivProduct.description + "</li>";
+    productItems += "<li>" + indivProduct.price + "</li>";
+    productItems += "</ul>";
+    productList.innerHTML += productItems;
+  } 
+ 
+  
+
+})();
