@@ -71,13 +71,19 @@ const products = [
 ]
 //leaving products in order above, and will change order physically in array if we want them to show differently on page
 //for of loop
-let productItems = " ";
+
 
  for (const indivProduct of products) {
+    let productItems = "<ul>";
     console.log(indivProduct);
-    productItems += "<li>" + products.name + "<li>";
+    productItems += "<li>" + indivProduct.name + "</li>";
+    productItems += "<li>" + indivProduct.category + "</li>";
+    productItems += "<li>" + indivProduct.description + "</li>";
+    productItems += "<li>" + indivProduct.price + "</li>";
+    productItems += "</ul>";
+    productList.innerHTML += productItems;
   } 
  
-  productList.innerHTML = productItems;
+  
 
 })();
