@@ -107,7 +107,7 @@ function nextImage(element)
     }
 } */
 
- for (const indivProduct of products) {
+ products.forEach ((indivProduct, i) =>  {
     let productItems = "<ul>";
     let button = document.createElement('button');
     console.log(indivProduct);
@@ -115,15 +115,10 @@ function nextImage(element)
     productItems += "<li>" + indivProduct.category + "</li>";
     productItems += "<li>" + indivProduct.description + "</li>";
     productItems += "<li>" + indivProduct.price + "</li>";
-    productItems += `<button data-id='"+i+"'>" + "Add to cart" +"</button>`
-
+    productItems += `<button data-id=${i}>Add to cart</button>`
     productItems += "</ul>";
     productList.innerHTML += productItems;
-    
-    // button.innerText = "Add to cart";
-    // button.setAttribute('data-id',i);
-    // document.getElementById('container').appendChild(button);
-  } 
+}) 
  
   let cart = [
     {
@@ -170,26 +165,6 @@ let items = [
     }
 ]
 cartFromStorage=[];
-
-/*inserted to 178 above
- for(let i=0; i<products.length; i++){
-    let button = document.createElement('button');
-    button.innerText = "Add to cart";
-    button.setAttribute('data-id',i);
-    document.getElementById('container').appendChild(button); */
-// }
-/* let myButtonContainer = document.getElementById('container');
-
-myButtonContainer.addEventListener('click',(event)=>{
-    if(event.target.hasAttribute('data-id')){
-        let id = event.target.getAttribute('data-id');
-        cartFromStorage.push(items[id]);
-        console.log(cartFromStorage);
-        localStorage.setItem('cart',JSON.stringify(cartFromStorage));
-    }else{
-        console.log('Button not clicked')
-    }
-}) */
 
 
 })();
