@@ -8,6 +8,7 @@ const products = [
     description: "Shellac with a Smack",
     price: 14.99,
     quantity: 0,
+    image: "Assets/BishNailPolish.jpg"
     },
     {
     name: "Side Eye",
@@ -109,7 +110,8 @@ function nextImage(element)
 
  products.forEach ((indivProduct, i) =>  {
     let productItems = "<ul>";
-    let button = document.createElement('button');
+    productItems += `<img src=${indivProduct.image} class=makeup>`
+    
     console.log(indivProduct);
     productItems += "<li>" + indivProduct.name + "</li>";
     productItems += "<li>" + indivProduct.category + "</li>";

@@ -84,6 +84,12 @@ nav li {
     font-style: italic;
 }
 
+.makeup{
+    height: 100px;
+    width: 100px;
+}
+
+
 
 /* add styling for screens 768px and above below */
 @media screen and (min-width: 768px) {
