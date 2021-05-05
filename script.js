@@ -93,32 +93,6 @@ const products = [
     image: "Assets/Makeupremover.jpg"
     }              
 ]
-//leaving products in order above, and will change order physically in array if we want them to show differently on page
-//for of loop
-/* 
-need to add images. See this example https://stackoverflow.com/questions/8810927/showing-an-image-from-an-array-of-images-javascript
-var imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = "GoldSassyLips.png";
-
-function nextImage(element)
-{
-    var img = document.getElementById(element);
-
-    for(var i = 0; i < imgArray.length;i++)
-    {
-        if(imgArray[i].src == img.src) // << check this
-        {
-            if(i === imgArray.length){
-                document.getElementById(element).src = imgArray[0].src;
-                break;
-            }
-            document.getElementById(element).src = imgArray[i+1].src;
-            break;
-        }
-    }
-} */
 
  products.forEach ((indivProduct, i) =>  {
     let productItems = "<ul>";
@@ -133,52 +107,20 @@ function nextImage(element)
     productItems += "</ul>";
     productList.innerHTML += productItems;
 }) 
- 
-  let cart = [
-    {
-        name: products.name, 
-        price: products.price,
-        quantity: products.quantity,
-    },
-    {
-      name: products.name, 
-      price: products.price,
-      quantity: products.quantity,
-    }
-]
-
-let cartToLocal = JSON.stringify(cart);
-
-window.localStorage.setItem('cart',cartToLocal);
 
 let cartFromStorage = JSON.parse(window.localStorage.getItem('cart'));
 
-cartFromStorage.push({
-    name:'item3', 
-    price:1.50,
-    quantity: 3
+let myButtons = document.querySelectorAll('button');
+myButtons.forEach((myButton)=> {
+    myButton.addEventListener('click',(event)=>{
+        if(event.target.hasAttribute('data-id')){
+            if(!cartFromStorage) {
+                cartFromStorage = [];
+            }
+            let id = event.target.getAttribute('data-id');
+            cartFromStorage.push(products[id]);
+            localStorage.setItem('cart',JSON.stringify(cartFromStorage));
+    }})
 })
-localStorage.setItem('cart', JSON.stringify(cartFromStorage));
-
-//localStorage.setItem('cart',"[]")
-localStorage.clear()
-
-/**
- * Example 2 add to cart
- */
-let items = [
-    {
-        name:'item', 
-        price:3.50,
-        quantity: 2
-    },
-    {
-        name:'item2', 
-        price:0.50,
-        quantity: 20
-    }
-]
-cartFromStorage=[];
-
 
 })();
