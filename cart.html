@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Open+Sans&display=swap" rel="stylesheet">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bish Cosmetics | About</title>
+        <title>Bish Cosmetics | Cart</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -27,17 +27,28 @@
             </nav>
             <img src="cart.png" alt="cart" class="cart">
         </header>
-        
-        <div id="container">
-        <h1>About</h1>
-        <!-- to do: add more content and some random organic type images -->
-            <p>When we formed Bish, each person had their own chief concerns.
-            Monica ensures our ingredients are organic & from sustainability sources.
-               Nicole is most concerned that our products are durable and long-lasting.
-               Dana focuses on each product offering deep pigmentation, and even coverage for all skin types and hues.
-               Bish Cosmetics is a owned by women, and we donate 5% of our profits to charities supporting women's causes.</p>
-            </p>              
+
+        <div id="container">                 
+            <form name="ShoppingList">
+                 <!-- <fieldset>
+                  <legend>Shopping cart</legend>
+                    <label>Item: <input type="text" name="name"></label>
+                    <label>Quantity: <input type="text" name="data"></label>
+            
+                    <input type="button" value="Save"   onclick="SaveItem()">
+                    <input type="button" value="Update" onclick="ModifyItem()">
+                    <input type="button" value="Delete" onclick="RemoveItem()">
+                </fieldset>  -->
+                <div id="items_table">
+                    <h2>Big Bish Cart</h2>
+                    <table id="list"></table>
+                    <label><input type="button" value="Clear" onclick="ClearAll()">
+                    * Delete all items</label>
+                </div>
+            </form>
+
+
         </div>
-        <script src="script.js" async defer></script>
+        <script src="cart.js" async defer></script>
     </body>
 </html>
