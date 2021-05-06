@@ -73,7 +73,6 @@ const products = [
     price: 14.99,
     quantity: 0,
     image: "Assets/Mattelip.jpg"
-    
 
     },
     {
@@ -120,6 +119,7 @@ myButtons.forEach((myButton)=> {
             let id = event.target.getAttribute('data-id');
             cartFromStorage.push(products[id]);
             localStorage.setItem('cart',JSON.stringify(cartFromStorage));
+
     }})
 })
 
