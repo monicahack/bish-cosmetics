@@ -14,14 +14,14 @@ function doShowAll() {
         let list = "<tr><th></th><th></th></tr>\n";
         let i = 0;
         //For a more advanced feature, you can set a cap on max items in the cart.
-        for (i = 0; i <= localStorage.length-1; i++) {
+        for (i = 0; i <= cart.length-1; i++) {
             list += "<tr><td>" + `<img src=${cart[i].image} class=makeup>` + "</td>\n<td>"
             list += "<tr><td>" + cart[i].name + "</td>\n<td>"
             list += "<tr><td>" + cart[i].price + "</td>\n<td>"
         }
         //If no item exists in the cart.
         if (list == "<tr><th></th><th></th></tr>\n") {
-            list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+            list += "<tr><td><i></i></td>\n<td><i></i></td></tr>\n";
         }
         //Bind the data to HTML table.
         //You can use jQuery, too.
