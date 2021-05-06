@@ -56,12 +56,16 @@ nav li {
     font-weight: 700;
     white-space: nowrap;
 }
+nav img {
+    height: 30px;
+}
 
-.cart {
+/* .cart {
     width: 30px;
     position: absolute;
     right: 10px;
-}
+    display: inline;
+} */
 
 .productArray {
     display: flex;
