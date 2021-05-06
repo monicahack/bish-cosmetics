@@ -17,6 +17,7 @@ function doShowAll() {
             cartItems += "<td id=image>" + `<img src=${cart[i].image} class=cartMakeup>` + "</td>"
             cartItems += "<td id=name>" + cart[i].name + "</td>"
             cartItems += "<td id=price>" + "$" + cart[i].price + "</td>"
+            //cartItems += "<td id=quantity>" + cart[i].quantity + "</td>"
             cartItems += "</tr>";
         }
 
@@ -30,8 +31,24 @@ function doShowAll() {
         alert('Cannot save shopping list as your browser does not support HTML 5');
     }
 }
-
 doShowAll();
+
+let subTotal = 0;
+let tax = .06;
+let grandTotal = 0;
+function getTotal() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    for (let i = 0; i < cart.length; i++) {
+        subTotal += (cart[i].price);
+    }
+        let salesTax = subTotal * tax;
+        grandTotal = subTotal + salesTax;
+        grandTotal = grandTotal.toFixed(2);
+
+        return grandTotal;
+}
+getTotal();
+console.log(grandTotal);
 
 let cartFromStorage = JSON.parse(window.localStorage.getItem('cart'));
 
