@@ -102,7 +102,7 @@ const products = [
     productItems += "<li>" + indivProduct.name + "</li>";
     productItems += "<li>" + indivProduct.category + "</li>";
     productItems += "<li>" + indivProduct.description + "</li>";
-    productItems += "<li>" + indivProduct.price + "</li>";
+    productItems += "<li>" + "$" + indivProduct.price + "</li>";
     productItems += `<button data-id=${i}>Add to cart</button>`
     productItems += "</ul>";
     productList.innerHTML += productItems;
