@@ -43,12 +43,48 @@ function getTotal() {
     }
         let salesTax = subTotal * tax;
         grandTotal = subTotal + salesTax;
+        salesTax = salesTax.toFixed(2);
         grandTotal = grandTotal.toFixed(2);
+        
+        let checkoutItems = "<ul>";
+        
+        checkoutItems += "<li>" + "Sub Total:" + "$" + `${subTotal}` + "</li>"
+        checkoutItems += "<li>" + "6% Sales Tax:" + "$" + `${salesTax}` + "</li>"
+        checkoutItems += "<li>" + "Total Due" + "$" + `${grandTotal}` + "</li>"
+        checkoutItems += "</ul>";
+        let checkoutTotals = document.querySelector("#checkoutTotals");
+        checkoutTotals.innerHTML += checkoutItems;
 
-        return grandTotal;
+           
 }
 getTotal();
 console.log(grandTotal);
+
+/* function doShowAll() {
+    if (CheckBrowser()) {
+        let key = "cart";
+        let cart = JSON.parse(localStorage.getItem(key));
+        let checkoutItems = "<ul>";
+        let i = 0;
+        for (i = 0; i <= cart.length-1; i++) {
+            checkoutItems += "<li>" + `${subTotal} >` + "</li>"
+            checkoutItems += "<li>" + `${salesTax} >` + "</li>"
+            checkoutItems += `${grandTotal} >` + "</li>"
+            checkoutItems += "</ul>";
+        } */
+
+/* products.forEach ((indivProduct, i) =>  {
+    let productItems = "<ul>";
+    productItems += `<img src=${indivProduct.image} class=makeup>`
+    
+    console.log(indivProduct);
+    productItems += "<li>" + indivProduct.name + "</li>";
+    productItems += "<li>" + indivProduct.category + "</li>";
+    productItems += "<li>" + indivProduct.description + "</li>";
+    productItems += "<li>" + "$" + indivProduct.price + "</li>";
+    productItems += `<button data-id=${i}>Add to cart</button>`
+    productItems += "</ul>";
+    productList.innerHTML += productItems; */
 
 let cartFromStorage = JSON.parse(window.localStorage.getItem('cart'));
 
