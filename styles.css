@@ -79,6 +79,13 @@ nav img {
     width: 250px;
 }
 
+/*putting this here to create container for checkout totals*/
+#checkoutTotals{
+    display: flex;
+}
+#checkoutTotals li {
+    list-style-type: none; 
+}
 .productArray li:first-of-type {
     font-size: 16px;
     text-shadow: 2px;
