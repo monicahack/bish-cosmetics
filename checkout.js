@@ -17,6 +17,7 @@ function getTotal() {
     }
         let salesTax = subTotal * tax;
         grandTotal = subTotal + salesTax;
+        subTotal = subTotal.toFixed(2);
         salesTax = salesTax.toFixed(2);
         grandTotal = grandTotal.toFixed(2);
         

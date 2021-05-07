@@ -96,7 +96,6 @@ const products = [
  products.forEach ((indivProduct, i) =>  {
     let productItems = "<ul>";
     productItems += `<img src=${indivProduct.image} class=makeup>`
-    
     console.log(indivProduct);
     productItems += "<li>" + indivProduct.name + "</li>";
     productItems += "<li>" + indivProduct.category + "</li>";
@@ -119,7 +118,7 @@ myButtons.forEach((myButton)=> {
             let id = event.target.getAttribute('data-id');
             cartFromStorage.push(products[id]);
             localStorage.setItem('cart',JSON.stringify(cartFromStorage));
-
+            alert("Item added to cart");
     }})
 })
 

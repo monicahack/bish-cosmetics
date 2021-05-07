@@ -43,6 +43,7 @@ function getTotal() {
     }
         let salesTax = subTotal * tax;
         grandTotal = subTotal + salesTax;
+        subTotal = subTotal.toFixed(2);
         salesTax = salesTax.toFixed(2);
         grandTotal = grandTotal.toFixed(2);
         
@@ -53,9 +54,7 @@ function getTotal() {
         checkoutItems += "<li>" + "Total Due: " + "$" + `${grandTotal}` + "</li>"
         checkoutItems += "</ul>";
         let checkoutTotals = document.querySelector("#checkoutTotals");
-        checkoutTotals.innerHTML += checkoutItems;
-
-           
+        checkoutTotals.innerHTML += checkoutItems;   
 }
 getTotal();
 console.log(grandTotal);
@@ -66,14 +65,13 @@ localStorage.setItem('cart',JSON.stringify(cartFromStorage));
 localStorage.getItem('cart');
 localStorage.removeItem('cart[i].name');
 
-function SaveItem() {
+// function SaveItem() {
+//     let name = document.forms.shoppingCart.name.JSON.stringify(cartFromStorage);
+//     let data = document.forms.shoppingCart.data.JSON.stringify(cartFromStorage);
+//     localStorage.setItem(name, data);
+//     doShowAll();
 
-    let name = document.forms.shoppingCart.name.JSON.stringify(cartFromStorage);
-    let data = document.forms.shoppingCart.data.JSON.stringify(cartFromStorage);
-    localStorage.setItem(name, data);
-    doShowAll();
-
-}
+// }
 
 if (localStorage.getItem('cart[i].name') !=null)
         {
@@ -83,11 +81,11 @@ if (localStorage.getItem('cart[i].name') !=null)
         }
     doShowAll();
 
-function RemoveItem() {
-let name=document.forms.shoppingCart.name.JSON.stringify(cartFromStorage);
-document.forms.shoppingCart.data.JSON.stringify(cartFromStorage)=localStorage.removeItem(name);
-doShowAll();
-}
+// function RemoveItem() {
+// let name=document.forms.shoppingCart.name.JSON.stringify(cartFromStorage);
+// document.forms.shoppingCart.data.JSON.stringify(cartFromStorage)=localStorage.removeItem(name);
+// doShowAll();
+// }
 
 function ClearAll() {
     localStorage.clear();
