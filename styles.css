@@ -83,7 +83,7 @@ nav img {
 #checkoutTotals{
     display: flex;
 }
-#checkoutTotals li {
+#checkoutTotals li, .checkoutContainer li {
     list-style-type: none; 
 }
 .productArray li:first-of-type {
@@ -209,6 +209,15 @@ td#name, td#price {
 table {
     border: 1 px solid darkgray;
 }
+
+.buttonGroup {
+    padding-bottom: 10px
+  }
+
+.buttonGroup label {
+    display: inline;
+}
+  
 
 /* add styling for screens 768px and above below */
 @media screen and (min-width: 768px) {
