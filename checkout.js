@@ -33,6 +33,30 @@ function getTotal() {
 getTotal();
 console.log(grandTotal);
 
+//if(checkboxEl.checked) //this says if a radio button or checkbox is checked
+
+//to access form data:
+function amountPaid() {
+    const form = document.getElementById('paymentForm');
+    const data = new FormData(form);
+    let cashTendered = data.get ('payment');
+    return cashTendered;
+} 
+amountPaid();
+console.log(cashTendered);      
+
+function getRadio(){
+const selectedOption = document.getElementById('paymentForm')['payment'].value;    
+}
+getRadio();
+console.log(getRadio);
+
+input.oninput = function paymentInput() {
+    result.innerHTML = input.value;
+    return paymentInput
+  };
+  paymentInput();
+  console.log(paymentInput);
 //for cash payments
 //if radio button selected is cash
 //then take amount paid, subtract amount due and provide change due

@@ -30,7 +30,7 @@
             </nav>
            <!-- example https://www.w3schools.com/howto/howto_css_checkout_form.asp --> 
         </header>
-        <form>
+        <form id ="paymentForm">
         <div class="row">
             <div class="col-75">
               <div class="container">
@@ -92,7 +92,7 @@
                       <p>Please select payment type:</p>
                       <div class="buttonGroup">
                       <input type="radio" id="cash" name="payment" value="cash"><label for="cash">Cash</label><br>
-                      <input type="text" id="cashTendered" name="payment" placeholder="Enter Amount Paid"><br> 
+                      <input type="text" id="cashTendered" name="payment" placeholder="Enter Amount Paid"> oninput: <span id="result"></span></span><br> 
                       <input type="radio" id="card" name="payment" value="card"><label for="card">Credit Card</label><br>
                     </div>
                       <label for="fname">Credit Card Information:</label>
@@ -117,11 +117,10 @@
                     </div>
           
                   </div>
-                  <label>
-                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                  </label>
                   <h4>Amount Due:</h4>
                 <div class="checkoutContainer"></div>
+                <h4>Amount Paid:</h4>
+                <div class="paymentContainer"></div>
                   <input type="submit" value="Pay Now" formaction="receipt.html" class="btn">
 
                 </form>
