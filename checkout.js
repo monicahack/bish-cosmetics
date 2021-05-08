@@ -33,8 +33,35 @@ function getTotal() {
 getTotal();
 console.log(grandTotal);
 
-//for cash payments
-//if radio button selected is cash
-//then take amount paid, subtract amount due and provide change due
-//see previous lab for checking money
-//reference lines 94-95 in checkout.html for id etc
+
+function amountPaid() {
+    const form = document.getElementById('paymentForm');
+    const data = new FormData(form);
+    let cashTendered = data.get ('cashPayment');
+    
+    return parseFloat(cashTendered);
+        
+} 
+   
+
+function getRadio(){
+return document.querySelector("input[type=radio]:checked").value    
+}
+
+const form = document.getElementById('paymentForm');
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log(amountPaid());
+    console.log(getRadio());
+    console.log("this is your grand total " + grandTotal);
+    let cashTendered = amountPaid();
+    if (cashTendered >= grandTotal) {
+    let changeBack= cashTendered - grandTotal;
+    console.log((changeBack));
+    } else {
+        alert("Insufficient payment, please try again Bish");
+    }
+        
+   })
+   
+
