@@ -33,15 +33,14 @@ function getTotal() {
 getTotal();
 console.log(grandTotal);
 
-//if(checkboxEl.checked) //this says if a radio button or checkbox is checked
 
-//to access form data:
 function amountPaid() {
     const form = document.getElementById('paymentForm');
     const data = new FormData(form);
     let cashTendered = data.get ('cashPayment');
-    //parseFloat(cashTendered);
+    
     return parseFloat(cashTendered);
+        
 } 
    
 
@@ -55,16 +54,14 @@ form.addEventListener('submit', function(event){
     console.log(amountPaid());
     console.log(getRadio());
     console.log("this is your grand total " + grandTotal);
-    let changeBack= grandTotal - cashTendered;
-    console.log(changeBack);
-    
-    
-    //amount paid (Grand Total)- amount due = change due, if less than zero, then insufficient pymnt, try again Bish
+    let cashTendered = amountPaid();
+    if (cashTendered >= grandTotal) {
+    let changeBack= cashTendered - grandTotal;
+    console.log((changeBack));
+    } else {
+        alert("Insufficient payment, please try again Bish");
+    }
+        
    })
    
 
-//for cash payments
-//if radio button selected is cash
-//then take amount paid, subtract amount due and provide change due
-//see previous lab for checking money
-//reference lines 94-95 in checkout.html for id etc
