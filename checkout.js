@@ -39,24 +39,30 @@ console.log(grandTotal);
 function amountPaid() {
     const form = document.getElementById('paymentForm');
     const data = new FormData(form);
-    let cashTendered = data.get ('payment');
-    return cashTendered;
+    let cashTendered = data.get ('cashPayment');
+    //parseFloat(cashTendered);
+    return parseFloat(cashTendered);
 } 
-amountPaid();
-console.log(cashTendered);      
+   
 
 function getRadio(){
-const selectedOption = document.getElementById('paymentForm')['payment'].value;    
+return document.querySelector("input[type=radio]:checked").value    
 }
-getRadio();
-console.log(getRadio);
 
-input.oninput = function paymentInput() {
-    result.innerHTML = input.value;
-    return paymentInput
-  };
-  paymentInput();
-  console.log(paymentInput);
+const form = document.getElementById('paymentForm');
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log(amountPaid());
+    console.log(getRadio());
+    console.log("this is your grand total " + grandTotal);
+    let changeBack= grandTotal - cashTendered;
+    console.log(changeBack);
+    
+    
+    //amount paid (Grand Total)- amount due = change due, if less than zero, then insufficient pymnt, try again Bish
+   })
+   
+
 //for cash payments
 //if radio button selected is cash
 //then take amount paid, subtract amount due and provide change due
