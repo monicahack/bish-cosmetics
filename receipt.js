@@ -62,9 +62,11 @@ localStorage.setItem('cart',JSON.stringify(cartFromStorage));
 localStorage.getItem('cart');
 localStorage.removeItem('cart[i].name');
 
-const form = document.getElementById('paymentForm');
+
 function getPaymentInfo () {
     let payment = JSON.parse(localStorage.getItem('payment'));
+    let cashTendered = payment[0];
+    let changeBack = payment[1];
     let paymentFromStorage = JSON.parse(window.localStorage.getItem('payment'));
     localStorage.setItem('payment',JSON.stringify(paymentFromStorage));
     localStorage.getItem('payment');
@@ -74,9 +76,7 @@ function getPaymentInfo () {
     paymentItems += "</ul>";
     let paymentInfo = document.querySelector(".paymentInfo");
     paymentInfo.innerHTML += paymentItems;
-    
+    console.log(cashTendered);
+    console.log(changeBack);
 }
-
-
-
-
+getPaymentInfo();
