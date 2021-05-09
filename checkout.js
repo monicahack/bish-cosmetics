@@ -72,6 +72,8 @@ form.addEventListener('submit', function(event){
         let paymentInfo = document.querySelector(".paymentInfo");
         paymentInfo.innerHTML += paymentItems;
         localStorage.setItem('payment',JSON.stringify(payment));
+        window.location.replace("receipt.html");
+
     } else {
         alert("Insufficient payment, please try again Bish");
     }

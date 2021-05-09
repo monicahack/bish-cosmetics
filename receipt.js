@@ -62,8 +62,8 @@ localStorage.setItem('cart',JSON.stringify(cartFromStorage));
 localStorage.getItem('cart');
 localStorage.removeItem('cart[i].name');
 
-
-function getPayment () {
+const form = document.getElementById('paymentForm');
+function getPaymentInfo () {
     let payment = JSON.parse(localStorage.getItem('payment'));
     let paymentFromStorage = JSON.parse(window.localStorage.getItem('payment'));
     localStorage.setItem('payment',JSON.stringify(paymentFromStorage));
