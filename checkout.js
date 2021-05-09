@@ -56,12 +56,24 @@ form.addEventListener('submit', function(event){
     console.log("this is your grand total " + grandTotal);
     let cashTendered = amountPaid();
     if (cashTendered >= grandTotal) {
-    let changeBack= cashTendered - grandTotal;
-    console.log((changeBack));
+        let paymentItems = "<ul>"
+        let changeBack = cashTendered - grandTotal;
+        changeBack = changeBack.toFixed(2);
+        console.log((changeBack));
+        let payment = JSON.parse(window.localStorage.getItem('payment'));
+        if(!payment) {
+            payment = [];
+        }
+        payment.push(cashTendered);
+        payment.push(changeBack);
+        paymentItems += "<li>" + "Amount Paid: " + "$" + `${cashTendered}` + "</li>"
+        paymentItems += "<li>" + "Change Due: " + "$" + `${changeBack}` + "</li>"
+        paymentItems += "</ul>";
+        let paymentInfo = document.querySelector(".paymentInfo");
+        paymentInfo.innerHTML += paymentItems;
+        localStorage.setItem('payment',JSON.stringify(payment));
+        window.location.replace("receipt.html");
     } else {
         alert("Insufficient payment, please try again Bish");
     }
-        
    })
-   
-

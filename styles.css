@@ -91,11 +91,10 @@ nav img {
     width: 250px;
 }
 
-/*putting this here to create container for checkout totals*/
 #checkoutTotals{
     display: flex;
 }
-#checkoutTotals li, .checkoutContainer li {
+#checkoutTotals li, .checkoutContainer li, .paymentInfo li {
     list-style-type: none; 
 }
 .productArray li:first-of-type {
