@@ -73,7 +73,6 @@ const products = [
     price: 14.99,
     quantity: 0,
     image: "Assets/Mattelip.jpg"
-
     },
     {
     name: "One Bish, Two Bish",
