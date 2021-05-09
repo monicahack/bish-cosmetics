@@ -89,10 +89,13 @@
                         </div>
                     <div class="col-50">
                       <h3>Payment</h3>
-                      <p>Please select payment type:</p>
+                      <h4>Amount Due:</h4>
+                      <div class="checkoutContainer"></div>
+                      <div class="paymentInfo"></div>
+                      <h4>Please select payment type:</h4>
                       <div class="buttonGroup">
                       <input type="radio" id="cash" name="payment" value="cash" required="required"><label for="cash">Cash</label><br>
-                      <input type="radio" id="card" name="payment" value="card" required="required"><label for="card">Credit Card</label><br>
+                      <input type="radio" id="card" name="payment" value="card" required="required"><label for="card">Credit Card</label><br><br>
                       <input type="text" id="cashTendered" name="cashPayment" placeholder="Enter Amount Paid"> <br> 
                     </div>
                       <label for="fname">Credit Card Information:</label>
@@ -117,8 +120,7 @@
                     </div>
           
                   </div>
-                  <h4>Amount Due:</h4>
-                <div class="checkoutContainer"></div>
+                  
                 
                   <input type="submit" value="Pay Now" formaction="receipt.html" class="btn">
 
