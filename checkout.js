@@ -38,7 +38,6 @@ function amountPaid() {
     const form = document.getElementById('paymentForm');
     const data = new FormData(form);
     let cashTendered = data.get ('cashPayment');
-    
     return parseFloat(cashTendered);
         
 } 
@@ -58,6 +57,7 @@ form.addEventListener('submit', function(event){
     if (cashTendered >= grandTotal) {
         let paymentItems = "<ul>"
         let changeBack = cashTendered - grandTotal;
+        cashTendered = cashTendered.toFixed(2);
         changeBack = changeBack.toFixed(2);
         console.log((changeBack));
         let payment = JSON.parse(window.localStorage.getItem('payment'));
